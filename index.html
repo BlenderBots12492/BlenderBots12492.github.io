@@ -1,47 +1,81 @@
-<!doctype>
-<html>
-    <head>
-        <style>
-            .paralax {
-                position: fixed;
-                height: 100vh;
-                width: 100vw;
-                top: 0px;
-                left: 0px;
-            }
-            .paralax img {
-                width: 100%;
-                height: 100%;
-                z-index: -2;
-            }
-            .paralax h1 {
-                text-align: center;
-                width: 100%;
-                height: 50%;
-                z-index: -1;
-            }
-            .paralax-spacer {
-                height:100vh;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="paralax">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxKJtW8FO4DElb1afDTwNJWrG8kzp8zXyuqQ&s">
-            <h1>The Blender Bots</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blender Bots | FTC Robotics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+<div class="parallax"></div>
+
+<div class="content">
+    <section class="about">
+        <h1>Who are we</h1>
+        <p>We are the <strong>Blender Bots</strong>, a high school robotics team competing in the FIRST Tech Challenge (FTC). Since 2013, we've been pushing the boundaries of engineering, coding, and teamwork to build competitive robots and inspire the next generation of innovators.</p>
+    </section>
+
+    <section class="ourRobots">
+        <h1>Robots</h1>
+        <h2 style="color: var(--neon-yellow); margin-bottom: 2rem;">Legacy of Innovation</h2>
+        <p>We have made bots since 2013. Here are some of our recent creations:</p>
+        
+        <div class="bots">
+            <div class="bot">
+                <h3 class="botName glitch" data-text="AIM">AIM</h3>
+                <div class="bot-image-placeholder">
+                    <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&q=80&w=800" alt="AIM Robot">
+                </div>
+            </div>
+            
+            <div class="bot">
+                <h3 class="botName glitch" data-text="BUMBLE BEE">BUMBLE BEE</h3>
+                <div class="bot-image-placeholder">
+                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800" alt="Bumble Bee Robot">
+                </div>
+            </div>
+            
+            <div class="bot">
+                <h3 class="botName glitch" data-text="THE UNCOOL ONE">THE UNCOOL ONE</h3>
+                <div class="bot-image-placeholder">
+                    <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=800" alt="The Uncool One Robot">
+                </div>
+            </div>
         </div>
-        <div class="paralax-spacer"></div>
-        <div class="content">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+    </section>
+    <section class="sponsors">
+        <h1>Sponsors</h1>
+        <div class="sponsorsGrid">
+            <div class="sponsor">Cyberdyne Systems</div>
+            <div class="sponsor">Stark Industries</div>
+            <div class="sponsor">Wayne Enterprises</div>
+            <div class="sponsor">Aperture Science</div>
+            <div class="sponsor">Omni Consumer Products</div>
         </div>
-    </body>
+    </section>
+
+    <section class="contact">
+        <h1>Contact Us</h1>
+        <div class="contactGrid">
+            <div class="contactCard">
+                <h3>Email</h3>
+                <a href="mailto:blenderbots@school.edu">blenderbots@school.edu</a>
+            </div>
+            <div class="contactCard">
+                <h3>YouTube</h3>
+                <a href="https://youtube.com/@BlenderBotsFTC" target="_blank">@BlenderBotsFTC</a>
+            </div>
+            <div class="contactCard">
+                <h3>School Address</h3>
+                <p>123 Robotics Way, San Jose, CA 95112</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+</body>
 </html>
