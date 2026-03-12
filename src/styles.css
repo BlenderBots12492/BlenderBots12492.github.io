@@ -315,6 +315,12 @@ h1, h2 {
   text-align: center;
   transition: 0.2s;
   box-shadow: -2px -2px 2px var(--neon-pink);
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
+.outreachSec div img {
+  width: 90%;
 }
 .outreachSec div:hover {
   border-color: var(--neon-yellow);
