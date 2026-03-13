@@ -17,7 +17,7 @@
                 const urlParams = new URLSearchParams(window.location.search);
                 return urlParams.get(param);
             }
-            fetch(`website/src/${getQueryParam("bot")}.json`).then(response => response.json()).then(
+            fetch(`${window.loacation.search}/../${getQueryParam("bot")}.json`).then(response => response.json()).then(
                 data => {
                     const name = data.name;
                     const descrition = data.descrition;
