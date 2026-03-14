@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title id="bot_name"></title>
+        <title class="bot_name"></title>
         <link rel="stylesheet" href="src/bot.css">
     </head>
     <body>
         <br>
-        <h1 id="bot_name"></h1>
+        <h1 class="bot_name"></h1>
         <br>
         <img id="image"/>
         
@@ -23,10 +23,12 @@
                     const name = data.name;
                     const descrition = data.description;
                     const imageUrl = data.image;
-                    document.querySelector("#bot_name").innerHTML = name;
+                    const names = document.querySelectorAll(".bot_name");
+                    for (const name of names) {
+                        name.innerHTML = name;
+                    }
                     document.querySelector("#image").src = imageUrl;
                     document.querySelector("#des").innerHTML = descrition;
-                    document.querySelector("#bot_name").innerHTML = name;
 
                 }
             );
