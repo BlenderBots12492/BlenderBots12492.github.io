@@ -510,7 +510,6 @@ h2 {
     text-align: center;
     width: 100%;
     font-weight: 500;
-
 }
 .title::before {
     font-size: 2em;
@@ -519,105 +518,109 @@ h2 {
     font: monospace; /*required for anim*/
     font-weight: 800;
     font-size: 2em;
-    content: "THE BLENDER BOTS";
-    animation: 2s loadAnim;
+    content: "";
+    animation: 2s loadAnim forwards;
+    animation-delay: 0.5s;
 }
 
 @keyframes loadAnim {
-0% {
-  content: '3';
+    0% {
+        content: "3";
+    }
+    3% {
+        content: "(^";
+    }
+    6% {
+        content: "^#!";
+    }
+    9% {
+        content: "#^9$";
+    }
+    12% {
+        content: "$0*)5";
+    }
+    16% {
+        content: "7@1$1(";
+    }
+    19% {
+        content: "8#39)*!";
+    }
+    22% {
+        content: "!8@7!1#)";
+    }
+    25% {
+        content: "!^!*)7!#$";
+    }
+    28% {
+        content: "&$(^^(*%)$";
+    }
+    31% {
+        content: ")91*#!#6@*8";
+    }
+    34% {
+        content: "^&7@8@(#^^69";
+    }
+    38% {
+        content: "3*$(96%&!#&^6";
+    }
+    41% {
+        content: "#^&!^23$4&7#&%";
+    }
+    44% {
+        content: "*^)%(!4956$##10";
+    }
+    47% {
+        content: "^$^^&*1)12$^0*8(";
+    }
+    50% {
+        content: "T$^^&*1)12$^0*8(";
+    }
+    53% {
+        content: "TH^^&*1)12$^0*8(";
+    }
+    56% {
+        content: "THE^&*1)12$^0*8(";
+    }
+    59% {
+        content: "THE &*1)12$^0*8(";
+    }
+    62% {
+        content: "THE B*1)12$^0*8(";
+    }
+    66% {
+        content: "THE BL1)12$^0*8(";
+    }
+    69% {
+        content: "THE BLE)12$^0*8(";
+    }
+    72% {
+        content: "THE BLEN12$^0*8(";
+    }
+    75% {
+        content: "THE BLEND2$^0*8(";
+    }
+    78% {
+        content: "THE BLENDE$^0*8(";
+    }
+    81% {
+        content: "THE BLENDER^0*8(";
+    }
+    84% {
+        content: "THE BLENDER 0*8(";
+    }
+    88% {
+        content: "THE BLENDER B*8(";
+    }
+    91% {
+        content: "THE BLENDER BO8(";
+    }
+    94% {
+        content: "THE BLENDER BOT(";
+    }
+    97% {
+        content: "THE BLENDER BOTS";
+    }
+    100% {
+        content: "THE BLENDER BOTS";
+    }
 }
-3% {
-  content: '(^';
-}
-6% {
-  content: '^#!';
-}
-9% {
-  content: '#^9$';
-}
-12% {
-  content: '$0*)5';
-}
-16% {
-  content: '7@1$1(';
-}
-19% {
-  content: '8#39)*!';
-}
-22% {
-  content: '!8@7!1#)';
-}
-25% {
-  content: '!^!*)7!#$';
-}
-28% {
-  content: '&$(^^(*%)$';
-}
-31% {
-  content: ')91*#!#6@*8';
-}
-34% {
-  content: '^&7@8@(#^^69';
-}
-38% {
-  content: '3*$(96%&!#&^6';
-}
-41% {
-  content: '#^&!^23$4&7#&%';
-}
-44% {
-  content: '*^)%(!4956$##10';
-}
-47% {
-  content: '^$^^&*1)12$^0*8(';
-}
-50% {
-  content: 'T$^^&*1)12$^0*8(';
-}
-53% {
-  content: 'TH^^&*1)12$^0*8(';
-}
-56% {
-  content: 'THE^&*1)12$^0*8(';
-}
-59% {
-  content: 'THE &*1)12$^0*8(';
-}
-62% {
-  content: 'THE B*1)12$^0*8(';
-}
-66% {
-  content: 'THE BL1)12$^0*8(';
-}
-69% {
-  content: 'THE BLE)12$^0*8(';
-}
-72% {
-  content: 'THE BLEN12$^0*8(';
-}
-75% {
-  content: 'THE BLEND2$^0*8(';
-}
-78% {
-  content: 'THE BLENDE$^0*8(';
-}
-81% {
-  content: 'THE BLENDER^0*8(';
-}
-84% {
-  content: 'THE BLENDER 0*8(';
-}
-88% {
-  content: 'THE BLENDER B*8(';
-}
-91% {
-  content: 'THE BLENDER BO8(';
-}
-94% {
-  content: 'THE BLENDER BOT(';
-}
-97% {
-  content: 'THE BLENDER BOTS';
-}
-}z
