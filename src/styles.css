@@ -45,7 +45,7 @@ body::before {
     background-color: #111; /* Fallback color */
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1920");
+        url("website/src/photos/team-photo.png");
     min-height: 80vh;
     background-attachment: fixed;
     background-position: center;
@@ -173,6 +173,8 @@ h2 {
 .bot:hover .glitch::after,
 .outreach:hover .glitch::before,
 .outreach:hover .glitch::after,
+.STEM:hover .glitch::before,
+.STEM:hover .glitch::after,
 .GraciousProfessionalism:hover .glitch::before,
 .GraciousProfessionalism:hover .glitch::after {
     opacity: 1; /* Show on hover */
@@ -180,6 +182,7 @@ h2 {
 
 .bot:hover .glitch::before,
 .outreach:hover .glitch::before,
+.STEM:hover .glitch::before,
 .GraciousProfessionalism:hover .glitch::before {
     left: 4px;
     text-shadow: -3px 0 var(--neon-cyan);
@@ -189,6 +192,7 @@ h2 {
 
 .bot:hover .glitch::after,
 .outreach:hover .glitch::after,
+.STEM:hover .glitch::after,
 .GraciousProfessionalism:hover .glitch::after {
     --slice-0: inset(50% 50% 50% 50%);
     --slice-1: inset(80% -6px 0 0);
@@ -464,7 +468,7 @@ h2 {
     border-style: solid;
     border-width: 2px;
     border-radius: 10px;
-    width: 40%;
+    width: 25%;
     text-align: center;
     transition: 0.2s;
     box-shadow: -2px -2px 2px var(--neon-pink);

@@ -1,19 +1,14 @@
 {
   "name": "BUMBLE BEE",
   "heroTitle": "Bumble Bee",
-  "description": "placeholder",
-  "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200",
-  "variants": [
-    "placeholder",
-    "placeholder",
-    "placeholder",
-    "placeholder"
-  ],
+  "description": "We had a pivoting arm setup with two slides a claw with three axis of motion",
+  "image": "/website/src/photos/INTO_THE_DEEP1.png",
+  "variants": ["Claw based Intake", "Level 2 hang"],
   "stack": [
-    { "title": "placeholder", "body": "placeholder" },
-    { "title": "placeholder", "body": "placeholder" },
-    { "title": "placeholder", "body": "placeholder" },
-    { "title": "placeholder", "body": "placeholder" }
+    { "title": "Drive", "body": "Macanum Drive" },
+    { "title": "Intake", "body": "A claw with three axis of freedom" },
+    { "title": "Scoring", "body": "10 samples or X specimens" },
+    { "title": "Autonomous", "body": "1 sample or 3 specimens" }
   ],
   "theme": {
     "hue": "52deg",
@@ -33,63 +28,96 @@
     "secondary": "#fef08a"
   },
   "features": {
-    "badges": true,
+    "badges": false,
     "stats": true,
     "stack": true,
-    "telemetry": true,
-    "checklist": true,
+    "telemetry": false,
+    "checklist": false,
     "timeline": true,
-    "plays": true,
+    "plays": false,
     "gallery": true
   },
   "stats": [
-    { "label": "placeholder", "value": "placeholder" },
-    { "label": "placeholder", "value": "placeholder" },
-    { "label": "placeholder", "value": "placeholder" },
-    { "label": "placeholder", "value": "placeholder" },
-    { "label": "placeholder", "value": "placeholder" },
-    { "label": "placeholder", "value": "placeholder" }
+    { "label": "Drive", "value": "Macanum Drive" },
+    {
+      "label": "Drive Team",
+      "value": "2 drivers + 1 coach + (optional) 1 human player"
+    },
+    { "label": "Auto", "value": "3 Specimens or 1 sample" },
+    { "label": "Scoring", "value": "about 95 points solo" },
+    { "label": "Awards", "value": "design award" },
+    { "label": "Endgame", "value": "Level 2 hang" }
   ],
-  "badges": [
-    "placeholder"
-
-  ],
+  "badges": ["First Into the Deep robot", "Iteration heavy", "Level 2 hang"],
   "timeline": [
-    { "year": "placeholder", "title": "placeholder", "detail": "placeholder" },
-    { "year": "placeholder", "title": "placeholder", "detail": "placeholder" },
-    { "year": "placeholder", "title": "placeholder", "detail": "placeholder" },
-    { "year": "placeholder", "title": "placeholder", "detail": "placeholder" },
-    { "year": "placeholder", "title": "placeholder", "detail": "placeholder" },
-    { "year": "placeholder", "title": "placeholder", "detail": "placeholder" }
+    {
+      "year": "Sept 7  ",
+      "title": "Kickoff",
+      "detail": "Brainstorming game strategy and initial designs"
+    },
+    {
+      "year": "Oct 31  ",
+      "title": "Screamage",
+      "detail": "Parts came in late so we only had a chassis"
+    },
+    { "year": "Nov 9  ", "title": "Meet #1", "detail": "" },
+    { "year": "Dec 13  ", "title": "Meet #2", "detail": "" },
+    {
+      "year": "Jan 18  ",
+      "title": "Meet #3",
+      "detail": "slides broke on bucket causing our infamous sample launch"
+    },
+    {
+      "year": "Feb 8  ",
+      "title": "League Tournament",
+      "detail": "We got 5th in quals and for playoffs we got third"
+    },
+    {
+      "year": "May 17  ",
+      "title": "Self-hosted scrimage",
+      "detail": "We hosted a scrimage with a few teams that did not move on from Leagues"
+    }
   ],
   "checklist": [
-    { "item": "placeholder", "status": "ready" },
-    { "item": "placeholder", "status": "ready" },
-    { "item": "placeholder", "status": "ready" },
-    { "item": "placeholder", "status": "ready" },
-    { "item": "placeholder", "status": "todo" },
-    { "item": "placeholder", "status": "todo" }
+    { "item": "Drive tuned", "status": "ready" },
+    { "item": "Autonomous working", "status": "ready" },
+    { "item": "Intake consistent", "status": "ready" },
+    { "item": "Scoring reliable", "status": "ready" },
+    { "item": "Endgame optimized", "status": "todo" },
+    { "item": "Advanced auto", "status": "todo" }
   ],
   "telemetry": [
-    { "label": "placeholder", "value": "6.2 s", "fill": 90 },
-    { "label": "placeholder", "value": "88%", "fill": 88 },
-    { "label": "placeholder", "value": "4%", "fill": 4 },
-    { "label": "placeholder", "value": "93%", "fill": 93 },
-    { "label": "placeholder", "value": "89%", "fill": 89 }
+    { "label": "Cycle time", "value": "PLACEHOLDER", "fill": 70 },
+    { "label": "Auto reliability", "value": "PLACEHOLDER", "fill": 75 },
+    { "label": "Failure rate", "value": "PLACEHOLDER", "fill": 10 },
+    { "label": "Drive accuracy", "value": "PLACEHOLDER", "fill": 85 },
+    { "label": "Scoring success", "value": "PLACEHOLDER", "fill": 80 }
   ],
   "plays": [
-    { "title": "placeholder", "time": "15s", "detail": "placeholder" },
-    { "title": "placeholder", "time": "15s", "detail": "placeholder" },
-    { "title": "placeholder", "time": "15s", "detail": "placeholder" },
-    { "title": "placeholder", "time": "15s", "detail": "placeholder" }
+    { "title": "Auto Start", "time": "15s", "detail": "PLACEHOLDER" },
+    { "title": "Cycle 1", "time": "15s", "detail": "PLACEHOLDER" },
+    { "title": "Cycle 2", "time": "15s", "detail": "PLACEHOLDER" },
+    { "title": "Endgame", "time": "15s", "detail": "PLACEHOLDER" }
   ],
   "gallery": [
-    { "src": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80&w=1200", "alt": "placeholder" },
-    { "src": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&q=80&w=1200", "alt": "placeholder" },
-    { "src": "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80&w=1200", "alt": "placeholder" },
-    { "src": "https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&q=80&w=1200", "alt": "placeholder" }
+    {
+      "src": "/website/src/photos/INTO_THE_DEEP1.png",
+      "alt": "Bumble Bee"
+    },
+    {
+      "src": "/website/src/photos/INTO_THE_DEEP2.png",
+      "alt": "Bumble Bee"
+    },
+    {
+      "src": "/website/src/photos/INTO_THE_DEEP3.png",
+      "alt": "Bumble Bee"
+    },
+    {
+      "src": "/website/src/photos/INTO_THE_DEEP4.png",
+      "alt": "Chassis"
+    }
   ],
-  "notes": "______ placeholder ______",
+  "notes": "Bumble Bee was our best robot yet, only beaten by AIM next year",
   "background": {
     "colors": {
       "tone1": "#fef08a",
