@@ -487,7 +487,7 @@ h2 {
 }
 .outreachSec div:hover {
     border-color: var(--neon-yellow);
-    transform: scale(1.1);
+    transform: scale(1.03);
     box-shadow: 2px 2px 2px var(--neon-pink);
 }
 .sponserUs div a {

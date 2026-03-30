@@ -1,0 +1,111 @@
+:root {
+    --neon-pink: #f8f005;
+    --neon-cyan: #00ffff;
+    --neon-yellow: #f8f005;
+    --bg-black: #0a0a0a;
+    --neon-magenta: #ff00ff;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: white;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Scanline effect */
+body::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background:
+        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+        linear-gradient(
+            90deg,
+            rgba(255, 0, 0, 0.06),
+            rgba(0, 255, 0, 0.02),
+            rgba(0, 0, 255, 0.06)
+        );
+    z-index: 2;
+    background-size:
+        100% 2px,
+        3px 100%;
+    pointer-events: none;
+}
+
+.parallax {
+    background-color: #111; /* Fallback color */
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("/website/src/photos/team-photo.png");
+    min-height: 80vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    border-bottom: 4px solid var(--neon-pink);
+    box-shadow: 0 0 20px var(--neon-pink);
+}
+
+.title {
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    width: 100%;
+    font-weight: 500;
+    color: var(--neon-cyan);
+    text-shadow: 2px 2px 0px var(--neon-magenta);
+    
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    margin: 40px 20px 10px;
+    color: var(--neon-cyan);
+    text-shadow: 2px 2px 0px var(--neon-magenta);
+}
+
+p {
+    max-width: 900px;
+    margin: 0 20px 40px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+strong {
+    color: var(--neon-cyan);
+}
+
+.back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: var(--neon-cyan);
+    text-shadow: 1px 1px 0px var(--neon-magenta);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+.back:hover svg, .back:hover, span {
+    transform: translateX(-4px);
+    transition: transform 0.2s ease;
+}
+.back svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    fill: var(--neon-cyan);
+}
