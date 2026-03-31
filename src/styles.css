@@ -139,13 +139,20 @@ h2 {
     color: white;
 }
 
-.bot img {
+.bot .bot-image-placeholder {
     width: 100%;
     height: 200px;
-    object-fit: cover;
-    background: #222;
+    overflow: hidden;
     border-radius: 4px;
     margin-top: 20px;
+    background: #222;
+}
+
+.bot .bot-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 /* Glitch Effect - Only on Hover for Robot Names and Outreach Titles */
@@ -367,6 +374,18 @@ h2 {
     margin-top: 40px;
 }
 
+.yearIcon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    object-fit: cover;
+    object-position: center;
+    transform: translateY(3px);
+    border-radius: 4px;
+    overflow: hidden;
+}
 .sponsor {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
