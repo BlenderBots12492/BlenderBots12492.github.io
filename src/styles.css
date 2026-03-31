@@ -531,7 +531,7 @@ h2 {
     align-items: center;
     justify-content: right;
     position: fixed;
-    top: 2px;
+    top: 0px;
     right: 0px;
     width: 100%;
     background-color: var(--bg-black);
