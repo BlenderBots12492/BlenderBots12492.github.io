@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://blenderbots12492.github.io/index.html
