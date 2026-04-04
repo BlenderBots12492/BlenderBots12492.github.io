@@ -1,116 +1,231 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blender Bots | FTC Robotics</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/styles.css">
-    <meta name="description" content="The Blender Bots High School team's web page.">
-</head>
-<body>
-<header role="banner">
-<div class="parallax"></div>
-<div><h1 class="title"></h1></div>
-</header>
-<nav role="navigation">
-<div style="text-align: center;" class="sponserUs"><div><a href="/src/sponserUs.html">SPONSER US</a></div></div>
-</nav>
-<div class="content">
-    <section class="about">
-        <h1>Who we are:</h1>
-        <p>We are the <strong>Blender Bots</strong>, a high school robotics team competing in the FIRST Tech Challenge (FTC). Since 1016, we've been competing and building robots. We are the only STEM opportunity on campus.</p>
-    </section>
-    <section class="info">
-    <h1>
-    <span class="year">DECODE</span> World ranking <span class="worldPerc">90</span>%
-    </h1>
-
-    <a class="scouts" href="https://ftcscout.org/teams/12492">View on scouts</a>
-    <br>
-    </section>
-
-    <section class="ourRobots">
-        <h1>Robots</h1>
-        <p>We have been making bots since 2016. Here are some of our recent creations:</p>
-
-        <div class="bots">
-            <a class="bot" href='src/bot.html?bot=AIM'>
-                <h2 class="botName" data-text="AIM">AIM</h2>
-                <div class="bot-image-placeholder">
-                    <img src="src/photos/DECODE1.png" alt="AIM Robot" loading="lazy" decoding="async" width="600" height="400">
-                </div>
-                <p style="margin-top: 4px;"><img alt="" class="yearIcon" src="https://ftc-resources.firstinspires.org/uploads/6f38e49e-8cd2-46e2-8885-c872aee20eaa" loading="lazy" decoding="async" width="20" height="20"> DECODE 2025-2026</p>
-            </a>
-
-            <a class="bot" href='src/bot.html?bot=BUMBLE_BEE'>
-                <h2 class="botName" data-text="BUMBLE BEE">BUMBLE BEE</h2>
-                <div class="bot-image-placeholder">
-                    <img src="src/photos/INTO_THE_DEEP1.png" alt="Bumble Bee Robot" loading="lazy" decoding="async" width="600" height="400">
-                </div>
-                <p style="margin-top: 4px;"><img alt="" src="https://i0.wp.com/firstroboticsbc.org/wp-content/uploads/2024/04/FIRST_DIVE-intothedeep-PatchLogo.webp?resize=476%2C526&ssl=1" class="yearIcon" loading="lazy" decoding="async" width="20" height="20"> INTO THE DEEP 2024-2025</p>
-            </a>
-
-            <a class="bot" href='src/bot.html?bot=strugie'>
-                <h2 class="botName" data-text="STRUGIE">STRUGIE</h2>
-                <div class="bot-image-placeholder">
-                    <img src="src/photos/CENTERSTAGE1.png" alt="strugie" loading="lazy" decoding="async" width="600" height="400">
-                </div>
-                <p style="margin-top: 4px;"><img alt="" class="yearIcon" src="https://nmftc.org/wp-content/uploads/2023/07/FIRST_CENTERSTAGE_Logo_Horizontal_RGB_June.png" loading="lazy" decoding="async" width="20" height="20"> CENTER STAGE 2023-2024</p>
-            </a>
-        </div>
-    </section>
-    <section class="sponsors">
-        <h1>Sponsors</h1>
-        <div class="sponsorsGrid">
-            <a class="sponsor" href="https://www.splunk.com/" target="_blank">Splunk</a>
-            <a class="sponsor" href="https://www.emotiv.com/" target="_blank">Emotiv</a>
-            <a class="sponsor" target="_blank">Playing at Learning</a>
-            <a class="sponsor" href="https://www.microsoft.com/" target="_blank">Microsoft</a>
-            <a class="sponsor" target="_blank">Del Mar PTSA</a>
-        </div>
-    </section>
-    <section class="outreachSec">
-    <div class="outreach">
-    <h2 class="" data-text="OutReach">Outreach</h2>
-    <img alt="outreachImg" src="src/photos/outreach1.png" loading="lazy" decoding="async">
-    <p>This year we managed to do ______________</p>
-    </div>
-    <div class="GraciousProfessionalism">
-    <h2 class="" data-text="Gracious Professionalism">Gracious Professionalism</h2>
-    <img alt="Gracious Professionalism img" src="src/photos/graciousprofessionalism1.png" loading="lazy" deconding="async">
-    <p>over the season we have given people replacement parts and even helped with debuging code, among the people we helped are RMS overdrive, Wolfbotics, and ____</p>
-    </div>
-    <div class="STEM">
-    <h2 class="" data-text="STEM">STEM</h2>
-    <img alt="STEM img" src="src/photos/STEM2.png" loading="lazy" decoding="async">
-    <p>
-    We are the only STEM opportunity on campus. This means any students that want to do STEM have to be on the Blender Bots team. This causes challanges due to large demand, and limited spots. Which is something we hope to fix this year. We plan on making a JV team however for this we need more sponsers and a larger space
-    </p>
-    </div>
-    </section>
-    <section class="contact">
-        <h1>Contact Us</h1>
-        <div class="contactGrid">
-            <div class="contactCard">
-                <h2>Email</h2>
-                <a href="">blenderbots@school.edu</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Blender Bots | FTC Robotics</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="src/styles.css" />
+        <meta
+            name="description"
+            content="The Blender Bots High School team's web page."
+        />
+    </head>
+    <body>
+        <header role="banner">
+            <div class="parallax"></div>
+            <div><h1 class="title"></h1></div>
+        </header>
+        <nav role="navigation">
+            <div style="text-align: center" class="sponserUs">
+                <div><a href="/src/sponserUs.html">SPONSER US</a></div>
             </div>
-            <div class="contactCard">
-                <h2>YouTube</h2>
-                <a href="" target="_blank">@BlenderBotsFTC</a>
-            </div>
-            <div class="contactCard">
-                <h2>School Address</h2>
-                <p>123 Robotics Way, San Jose, CA 95112</p>
-            </div>
-        </div>
-    </section>
-    <br/>
-    <br/>
-</div>
+        </nav>
+        <div class="content">
+            <section class="about">
+                <h1>Who we are:</h1>
+                <p>
+                    We are the <strong>Blender Bots</strong>, a high school
+                    robotics team competing in the FIRST Tech Challenge (FTC).
+                    Since 1016, we've been competing and building robots. We are
+                    the only STEM opportunity on campus.
+                </p>
+            </section>
+            <section class="info">
+                <h1>
+                    <span class="year">DECODE</span> World ranking
+                    <span class="worldPerc">90</span>%
+                </h1>
 
-</body>
+                <a class="scouts" href="https://ftcscout.org/teams/12492"
+                    >View on scouts</a
+                >
+                <br />
+            </section>
+
+            <section class="ourRobots">
+                <h1>Robots</h1>
+                <p>
+                    We have been making bots since 2016. Here are some of our
+                    recent creations:
+                </p>
+
+                <div class="bots">
+                    <a class="bot" href="src/bot.html?bot=AIM">
+                        <h2 class="botName" data-text="AIM">AIM</h2>
+                        <div class="bot-image-placeholder">
+                            <img
+                                src="src/photos/DECODE1.png"
+                                alt="AIM Robot"
+                                loading="lazy"
+                                decoding="async"
+                                width="600"
+                                height="400"
+                            />
+                        </div>
+                        <p style="margin-top: 4px">
+                            <img
+                                alt="Decode"
+                                class="yearIcon"
+                                src="https://ftc-resources.firstinspires.org/uploads/6f38e49e-8cd2-46e2-8885-c872aee20eaa"
+                                loading="lazy"
+                                decoding="async"
+                                width="20"
+                                height="20"
+                            />
+                            DECODE 2025-2026
+                        </p>
+                    </a>
+
+                    <a class="bot" href="src/bot.html?bot=BUMBLE_BEE">
+                        <h2 class="botName" data-text="BUMBLE BEE">
+                            BUMBLE BEE
+                        </h2>
+                        <div class="bot-image-placeholder">
+                            <img
+                                src="src/photos/INTO_THE_DEEP1.png"
+                                alt="Bumble Bee Robot"
+                                loading="lazy"
+                                decoding="async"
+                                width="600"
+                                height="400"
+                            />
+                        </div>
+                        <p style="margin-top: 4px">
+                            <img
+                                alt="Into The Deep"
+                                src="https://i0.wp.com/firstroboticsbc.org/wp-content/uploads/2024/04/FIRST_DIVE-intothedeep-PatchLogo.webp?resize=476%2C526&ssl=1"
+                                class="yearIcon"
+                                loading="lazy"
+                                decoding="async"
+                                width="20"
+                                height="20"
+                            />
+                            INTO THE DEEP 2024-2025
+                        </p>
+                    </a>
+
+                    <a class="bot" href="src/bot.html?bot=strugie">
+                        <h2 class="botName" data-text="STRUGIE">STRUGIE</h2>
+                        <div class="bot-image-placeholder">
+                            <img
+                                src="src/photos/CENTERSTAGE1.png"
+                                alt="strugie"
+                                loading="lazy"
+                                decoding="async"
+                                width="600"
+                                height="400"
+                            />
+                        </div>
+                        <p style="margin-top: 4px">
+                            <img
+                                alt="centerstage"
+                                class="yearIcon"
+                                src="https://nmftc.org/wp-content/uploads/2023/07/FIRST_CENTERSTAGE_Logo_Horizontal_RGB_June.png"
+                                loading="lazy"
+                                decoding="async"
+                                width="20"
+                                height="20"
+                            />
+                            CENTER STAGE 2023-2024
+                        </p>
+                    </a>
+                </div>
+            </section>
+            <section class="sponsors">
+                <h1>Sponsors</h1>
+                <div class="sponsorsGrid">
+                    <a
+                        class="sponsor"
+                        href="https://www.splunk.com/"
+                        target="_blank"
+                        >Splunk</a
+                    >
+                    <a
+                        class="sponsor"
+                        href="https://www.emotiv.com/"
+                        target="_blank"
+                        >Emotiv</a
+                    >
+                    <a class="sponsor" target="_blank">Playing at Learning</a>
+                    <a
+                        class="sponsor"
+                        href="https://www.microsoft.com/"
+                        target="_blank"
+                        >Microsoft</a
+                    >
+                    <a class="sponsor" target="_blank">Del Mar PTSA</a>
+                </div>
+            </section>
+            <section class="outreachSec">
+                <div class="outreach">
+                    <h2 class="" data-text="OutReach">Outreach</h2>
+                    <img
+                        alt="outreachImg"
+                        src="src/photos/outreach1.png"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <p>This year we managed to do ______________</p>
+                </div>
+                <div class="GraciousProfessionalism">
+                    <h2 class="" data-text="Gracious Professionalism">
+                        Gracious Professionalism
+                    </h2>
+                    <img
+                        alt="Gracious Professionalism img"
+                        src="src/photos/graciousprofessionalism1.png"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <p>
+                        over the season we have given people replacement parts
+                        and even helped with debuging code, among the people we
+                        helped are RMS overdrive, Wolfbotics, and ____
+                    </p>
+                </div>
+                <div class="STEM">
+                    <h2 class="" data-text="STEM">STEM</h2>
+                    <img
+                        alt="STEM img"
+                        src="src/photos/STEM2.png"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <p>
+                        We are the only STEM opportunity on campus. This means
+                        any students that want to do STEM have to be on the
+                        Blender Bots team. This causes challanges due to large
+                        demand, and limited spots. Which is something we hope to
+                        fix this year. We plan on making a JV team however for
+                        this we need more sponsers and a larger space
+                    </p>
+                </div>
+            </section>
+            <section class="contact">
+                <h1>Contact Us</h1>
+                <div class="contactGrid">
+                    <div class="contactCard">
+                        <h2>Email</h2>
+                        <a href="">blenderbots@school.edu</a>
+                    </div>
+                    <div class="contactCard">
+                        <h2>YouTube</h2>
+                        <a href="" target="_blank">@BlenderBotsFTC</a>
+                    </div>
+                    <div class="contactCard">
+                        <h2>School Address</h2>
+                        <p>123 Robotics Way, San Jose, CA 95112</p>
+                    </div>
+                </div>
+            </section>
+            <br />
+            <br />
+        </div>
+    </body>
 </html>
