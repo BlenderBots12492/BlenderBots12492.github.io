@@ -44,7 +44,7 @@ body::before {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("/src/photos/team-photo.webp");
-        /*high res, low res*/
+    /*high res, low res*/
     min-height: 80vh;
     background-attachment: fixed;
     background-position: center;
