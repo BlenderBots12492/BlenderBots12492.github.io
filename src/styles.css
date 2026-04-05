@@ -1,3 +1,6 @@
+/* ========================================
+   CSS CUSTOM PROPERTIES
+   ======================================== */
 :root {
     --neon-pink: #f8f005;
     --neon-cyan: #9c8400;
@@ -6,6 +9,9 @@
     --neon-magenta: #ccc;
 }
 
+/* ========================================
+   BASE STYLES
+   ======================================== */
 body {
     background-color: var(--bg-black);
     color: white;
@@ -15,7 +21,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Scanline effect */
+/* Scanline overlay */
 body::before {
     content: " ";
     display: block;
@@ -39,12 +45,14 @@ body::before {
     pointer-events: none;
 }
 
+/* ========================================
+   HEADER / PARALLAX
+   ======================================== */
 .parallax {
-    background-color: #111; /* Fallback color */
+    background-color: #111;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("/src/photos/team-photo.webp");
-    /*high res, low res*/
     min-height: 80vh;
     background-attachment: fixed;
     background-position: center;
@@ -55,6 +63,129 @@ body::before {
     box-shadow: 0 0 20px var(--neon-pink);
 }
 
+.title {
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    width: 100%;
+    font-weight: 500;
+}
+
+.title::before {
+    color: white;
+    text-shadow: 2px 2px 2px var(--neon-cyan);
+    font-family: Inter;
+    font-weight: 800;
+    font-size: 2em;
+    content: "";
+    animation: 2s load-anim forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes load-anim {
+    0% { content: "3"; }
+    3% { content: "(^"; }
+    6% { content: "^#!"; }
+    9% { content: "#^9$"; }
+    12% { content: "$0*)5"; }
+    16% { content: "7@1$1("; }
+    19% { content: "8#39)*!"; }
+    22% { content: "!8@7!1#)"; }
+    25% { content: "!^!*)7!#$"; }
+    28% { content: "&$(^^(*%)$"; }
+    31% { content: ")91*#!#6@*8"; }
+    34% { content: "^&7@8@(#^^69"; }
+    38% { content: "3*$(96%&!#&^6"; }
+    41% { content: "#^&!^23$4&7#&%"; }
+    44% { content: "*^)%(!4956$##10"; }
+    47% { content: "^$^^&*1)12$^0*8("; }
+    50% { content: "T$^^&*1)12$^0*8("; }
+    53% { content: "TH^^&*1)12$^0*8("; }
+    56% { content: "THE^&*1)12$^0*8("; }
+    59% { content: "THE &*1)12$^0*8("; }
+    62% { content: "THE B*1)12$^0*8("; }
+    66% { content: "THE BL1)12$^0*8("; }
+    69% { content: "THE BLE)12$^0*8("; }
+    72% { content: "THE BLEN12$^0*8("; }
+    75% { content: "THE BLEND2$^0*8("; }
+    78% { content: "THE BLENDE$^0*8("; }
+    81% { content: "THE BLENDER^0*8("; }
+    84% { content: "THE BLENDER 0*8("; }
+    88% { content: "THE BLENDER B*8("; }
+    91% { content: "THE BLENDER BO8("; }
+    94% { content: "THE BLENDER BOT("; }
+    97% { content: "THE BLENDER BOTS"; }
+    100% { content: "THE BLENDER BOTS"; }
+}
+
+/* ========================================
+   NAVIGATION / SPONSOR BAR
+   ======================================== */
+.sponsor-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(10, 10, 10, 0.95) 0%,
+        rgba(10, 10, 10, 0.8) 100%
+    );
+    backdrop-filter: blur(8px);
+    z-index: 10;
+    border-bottom: 1px solid rgba(248, 240, 5, 0.2);
+    padding: 2px 0;
+    height: 32px;
+}
+
+.sponsor-bar-inner {
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.sponsor-bar-link {
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 12px;
+    padding: 4px 12px;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.sponsor-bar-link:hover {
+    color: var(--neon-yellow);
+    background: rgba(248, 240, 5, 0.08);
+}
+
+.sponsor-bar-link::before {
+    content: "";
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    top: 20px;
+    left: 0;
+    background-color: yellow;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.sponsor-bar-link:hover::before {
+    transform: scaleX(1);
+}
+
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
 .content {
     padding: 60px 20px;
     max-width: 1200px;
@@ -63,18 +194,16 @@ body::before {
     z-index: 1;
 }
 
-.about,
-.ourRobots {
-    margin-bottom: 80px;
-}
-
+/* ========================================
+   SECTION HEADINGS
+   ======================================== */
 h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
 .about h2,
-.ourRobots > h2 {
+.robots > h2 {
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 2rem;
@@ -89,14 +218,45 @@ h1 {
     max-width: 800px;
 }
 
-.bots {
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
+.about {
+    margin-bottom: 80px;
+}
+
+/* ========================================
+   INFO / RANKING SECTION
+   ======================================== */
+.info h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--neon-magenta);
+    text-shadow: 1px 1px 0px var(--neon-cyan);
+}
+
+.scouts-link {
+    display: inline;
+    color: gray;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+/* ========================================
+   ROBOTS SECTION
+   ======================================== */
+.robots {
+    margin-bottom: 80px;
+}
+
+.bot-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
 
-.bot {
+.bot-card {
     text-decoration: none;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -109,7 +269,7 @@ h1 {
     cursor: pointer;
 }
 
-.bot::before {
+.bot-card::before {
     content: "";
     position: absolute;
     top: 0;
@@ -121,18 +281,18 @@ h1 {
     transition: transform 0.3s ease;
 }
 
-.bot:hover {
+.bot-card:hover {
     background: rgba(255, 255, 255, 0.05);
     border-color: var(--neon-pink);
     box-shadow: 0 0 30px rgba(248, 240, 5, 0.3);
     transform: translateY(-10px);
 }
 
-.bot:hover::before {
+.bot-card:hover::before {
     transform: scaleX(1);
 }
 
-.bot .bot-image-placeholder {
+.bot-card .bot-image-placeholder {
     width: 100%;
     height: 200px;
     overflow: hidden;
@@ -141,238 +301,23 @@ h1 {
     background: #222;
 }
 
-.bot .bot-image-placeholder img {
+.bot-card .bot-image-placeholder img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
-/* Glitch Effect - Only on Hover for Robot Names and Outreach Titles */
-.glitch {
-    position: relative;
-    display: inline-block;
+.bot-card p {
+    color: #ccc;
 }
 
-.glitch::before,
-.glitch::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    pointer-events: none;
-    opacity: 0; /* Hidden by default */
-    transition: opacity 0.2s ease;
-}
-
-/* trigger on hover for bots and outreach section boxes */
-.bot:hover .glitch::before,
-.bot:hover .glitch::after,
-.outreach:hover .glitch::before,
-.outreach:hover .glitch::after,
-.STEM:hover .glitch::before,
-.STEM:hover .glitch::after,
-.GraciousProfessionalism:hover .glitch::before,
-.GraciousProfessionalism:hover .glitch::after {
-    opacity: 1; /* Show on hover */
-}
-
-.bot:hover .glitch::before,
-.outreach:hover .glitch::before,
-.STEM:hover .glitch::before,
-.GraciousProfessionalism:hover .glitch::before {
-    left: 4px;
-    text-shadow: -3px 0 var(--neon-cyan);
-    clip-path: inset(44% 0 43% 0);
-    animation: glitch-anim 2s infinite linear alternate-reverse;
-}
-
-.bot:hover .glitch::after,
-.outreach:hover .glitch::after,
-.STEM:hover .glitch::after,
-.GraciousProfessionalism:hover .glitch::after {
-    --slice-0: inset(50% 50% 50% 50%);
-    --slice-1: inset(80% -6px 0 0);
-    --slice-2: inset(50% -6px 30% 0);
-    --slice-3: inset(10% -6px 85% 0);
-    --slice-4: inset(40% -6px 43% 0);
-    --slice-5: inset(80% -6px 5% 0);
-    background-color: var(--bg-black);
-    text-shadow:
-        -3px -3px 0px #f8f005,
-        3px 3px 0px #00e6f6;
-    clip-path: var(--slice-0);
-    animation: 1s glitch;
-    animation-timing-function: steps(2, end);
-    left: 0;
-}
-
-@keyframes glitch-anim {
-    0% {
-        clip-path: inset(31% 0 6% 0);
-        transform: skew(0.85deg);
-    }
-    5% {
-        clip-path: inset(70% 0 29% 0);
-        transform: skew(0.85deg);
-    }
-    10% {
-        clip-path: inset(29% 0 17% 0);
-        transform: skew(0.85deg);
-    }
-    15% {
-        clip-path: inset(16% 0 9% 0);
-        transform: skew(0.85deg);
-    }
-    20% {
-        clip-path: inset(2% 0 77% 0);
-        transform: skew(0.85deg);
-    }
-    25% {
-        clip-path: inset(13% 0 86% 0);
-        transform: skew(0.85deg);
-    }
-    30% {
-        clip-path: inset(80% 0 17% 0);
-        transform: skew(0.85deg);
-    }
-    35% {
-        clip-path: inset(91% 0 2% 0);
-        transform: skew(0.85deg);
-    }
-    40% {
-        clip-path: inset(79% 0 15% 0);
-        transform: skew(0.85deg);
-    }
-    45% {
-        clip-path: inset(75% 0 60% 0);
-        transform: skew(0.85deg);
-    }
-    50% {
-        clip-path: inset(59% 0 2% 0);
-        transform: skew(0.85deg);
-    }
-    55% {
-        clip-path: inset(29% 0 87% 0);
-        transform: skew(0.85deg);
-    }
-    60% {
-        clip-path: inset(15% 0 1% 0);
-        transform: skew(0.85deg);
-    }
-    65% {
-        clip-path: inset(82% 0 70% 0);
-        transform: skew(0.85deg);
-    }
-    70% {
-        clip-path: inset(97% 0 86% 0);
-        transform: skew(0.85deg);
-    }
-    75% {
-        clip-path: inset(25% 0 60% 0);
-        transform: skew(0.85deg);
-    }
-    80% {
-        clip-path: inset(34% 0 86% 0);
-        transform: skew(0.85deg);
-    }
-    85% {
-        clip-path: inset(54% 0 51% 0);
-        transform: skew(0.85deg);
-    }
-    90% {
-        clip-path: inset(15% 0 96% 0);
-        transform: skew(0.85deg);
-    }
-    95% {
-        clip-path: inset(28% 0 10% 0);
-        transform: skew(0.85deg);
-    }
-    100% {
-        clip-path: inset(45% 0 2% 0);
-        transform: skew(0.85deg);
-    }
-}
-
-@keyframes glitch {
-    0% {
-        clip-path: var(--slice-1);
-        transform: translate(-20px, -10px);
-    }
-
-    10% {
-        clip-path: var(--slice-3);
-        transform: translate(10px, 10px);
-    }
-
-    20% {
-        clip-path: var(--slice-1);
-        transform: translate(-10px, 10px);
-    }
-
-    30% {
-        clip-path: var(--slice-3);
-        transform: translate(0px, 5px);
-    }
-
-    40% {
-        clip-path: var(--slice-2);
-        transform: translate(-5px, 0px);
-    }
-
-    50% {
-        clip-path: var(--slice-3);
-        transform: translate(5px, 0px);
-    }
-
-    60% {
-        clip-path: var(--slice-4);
-        transform: translate(5px, 10px);
-    }
-
-    70% {
-        clip-path: var(--slice-2);
-        transform: translate(-10px, 10px);
-    }
-
-    80% {
-        clip-path: var(--slice-5);
-        transform: translate(20px, -10px);
-    }
-
-    90% {
-        clip-path: var(--slice-1);
-        transform: translate(-10px, 0px);
-    }
-
-    100% {
-        clip-path: var(--slice-1);
-        transform: translate(0, 0);
-    }
-}
-
-/* Sponsors Section */
-.sponsors {
-    padding: 80px 0;
-    text-align: center;
-}
-.sponsors h2 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.bot-name {
+    color: white;
     font-size: 2em;
 }
 
-.sponsorsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.yearIcon {
+.year-icon {
     width: 20px;
     height: 20px;
     display: inline-block;
@@ -384,7 +329,29 @@ h1 {
     border-radius: 4px;
     overflow: hidden;
 }
-.sponsor {
+
+/* ========================================
+   SPONSORS SECTION
+   ======================================== */
+.sponsors {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.sponsors h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2em;
+}
+
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.sponsor-link {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
@@ -401,92 +368,23 @@ h1 {
     min-height: 100px;
 }
 
-.sponsor:hover {
+.sponsor-link:hover {
     border-color: yellow;
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
     transform: scale(1.05);
     color: yellow;
 }
 
-/* Contact Section */
-.contact {
-    padding: 80px 0;
-    text-align: center;
-}
-.contact h2 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 2em;
-}
-
-.contactGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 40px;
-}
-
-.contactCard {
-    background: rgba(255, 255, 255, 0.03);
-    border-left: 4px solid var(--neon-pink);
-    padding: 30px;
-    text-align: left;
-    transition: all 0.3s ease;
-}
-
-.contactCard:hover {
-    background: rgba(255, 255, 255, 0.05);
-    transform: translateX(10px);
-}
-
-.contactCard h3 {
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.contactCard a,
-.contactCard p {
-    color: #ccc;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.2s ease;
-}
-
-.contactCard a:hover {
-    color: white;
-}
-
-.footer {
-    padding: 40px 0;
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 80px;
-    color: #666;
-    font-size: 0.9rem;
-}
-
-.info h1 {
-    font-size: 2rem;
-    font-weight: 500;
-    color: var(--neon-magenta);
-    text-shadow: 1px 1px 0px var(--neon-cyan);
-}
-
-.scouts {
-    display: inline;
-    color: gray;
-    margin-bottom: 2rem;
-    cursor: pointer;
-}
-
-.outreachSec {
+/* ========================================
+   OUTREACH SECTION
+   ======================================== */
+.outreach-section {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
+
 .outreach-item {
     display: flex;
     align-items: center;
@@ -494,9 +392,11 @@ h1 {
     padding: 30px 0;
     border-bottom: 2px solid var(--neon-pink);
 }
+
 .outreach-item:last-of-type {
     border-bottom: none;
 }
+
 .outreach-item img {
     width: 40%;
     max-width: 400px;
@@ -504,23 +404,27 @@ h1 {
     border-radius: 8px;
     flex-shrink: 0;
 }
+
 .outreach-text {
     flex: 1;
     text-align: left;
 }
-.outreachSec h2 {
+
+.outreach-section h2 {
     color: white;
     text-shadow: 2px 2px 4px #8b6508;
     font-size: 1.8em;
     margin-top: 0;
     margin-bottom: 10px;
 }
-.outreachSec p {
+
+.outreach-section p {
     text-align: left;
     line-height: 1.6;
     font-size: 1.1em;
     margin: 0;
 }
+
 @media (max-width: 768px) {
     .outreach-item {
         flex-direction: column;
@@ -530,196 +434,56 @@ h1 {
         max-width: 100%;
     }
 }
-.sponserUs div a {
-    font-weight: 700;
+
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
+.contact {
+    padding: 80px 0;
     text-align: center;
-    width: 100%;
-    color: #fff;
-    text-decoration: none;
-    margin: 0 12px;
-    padding: 4px 12px;
+}
+
+.contact h2 {
+    text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 0.85rem;
-    border-radius: 4px;
+    font-size: 2em;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 4px solid var(--neon-pink);
+    padding: 30px;
+    text-align: left;
     transition: all 0.3s ease;
 }
-.sponserUs div {
-    text-align: center;
-    display: flex;
-    align-items: center;
-}
-.sponserUs {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    width: 100%;
-    background: linear-gradient(
-        180deg,
-        rgba(10, 10, 10, 0.95) 0%,
-        rgba(10, 10, 10, 0.8) 100%
-    );
-    backdrop-filter: blur(8px);
-    z-index: 10;
-    border-bottom: 1px solid rgba(248, 240, 5, 0.2);
-    padding: 2px 0;
-    height: 32px;
+
+.contact-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(10px);
 }
 
-.sponserUs div a:hover {
-    color: var(--neon-yellow);
-    background: rgba(248, 240, 5, 0.08);
-}
-.sponserUs p {
-    margin-left: 20px;
-    text-align: left;
-    justify-self: left;
-    font-family: "Inter", sans-serif;
-    font-size: 1.2em;
+.contact-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
     text-transform: uppercase;
-}
-.sponserUs div a::before {
-    content: "";
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 2px;
-    top: 20px;
-    left: 0;
-    background-color: yellow;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-.sponserUs div a:hover::before {
-    transform: scaleX(1);
-}
-.title {
-    position: absolute;
-    top: 20%;
-    text-align: center;
-    width: 100%;
-    font-weight: 500;
-}
-.title::before {
-    font-size: 2em;
-    color: white;
-    text-shadow: 2px 2px 2px var(--neon-cyan);
-    font-family: Inter; /*required for anim*/
-    font-weight: 800;
-    font-size: 2em;
-    content: "";
-    animation: 2s loadAnim forwards;
-    animation-delay: 0.5s;
+    letter-spacing: 2px;
 }
 
-@keyframes loadAnim {
-    0% {
-        content: "3";
-    }
-    3% {
-        content: "(^";
-    }
-    6% {
-        content: "^#!";
-    }
-    9% {
-        content: "#^9$";
-    }
-    12% {
-        content: "$0*)5";
-    }
-    16% {
-        content: "7@1$1(";
-    }
-    19% {
-        content: "8#39)*!";
-    }
-    22% {
-        content: "!8@7!1#)";
-    }
-    25% {
-        content: "!^!*)7!#$";
-    }
-    28% {
-        content: "&$(^^(*%)$";
-    }
-    31% {
-        content: ")91*#!#6@*8";
-    }
-    34% {
-        content: "^&7@8@(#^^69";
-    }
-    38% {
-        content: "3*$(96%&!#&^6";
-    }
-    41% {
-        content: "#^&!^23$4&7#&%";
-    }
-    44% {
-        content: "*^)%(!4956$##10";
-    }
-    47% {
-        content: "^$^^&*1)12$^0*8(";
-    }
-    50% {
-        content: "T$^^&*1)12$^0*8(";
-    }
-    53% {
-        content: "TH^^&*1)12$^0*8(";
-    }
-    56% {
-        content: "THE^&*1)12$^0*8(";
-    }
-    59% {
-        content: "THE &*1)12$^0*8(";
-    }
-    62% {
-        content: "THE B*1)12$^0*8(";
-    }
-    66% {
-        content: "THE BL1)12$^0*8(";
-    }
-    69% {
-        content: "THE BLE)12$^0*8(";
-    }
-    72% {
-        content: "THE BLEN12$^0*8(";
-    }
-    75% {
-        content: "THE BLEND2$^0*8(";
-    }
-    78% {
-        content: "THE BLENDE$^0*8(";
-    }
-    81% {
-        content: "THE BLENDER^0*8(";
-    }
-    84% {
-        content: "THE BLENDER 0*8(";
-    }
-    88% {
-        content: "THE BLENDER B*8(";
-    }
-    91% {
-        content: "THE BLENDER BO8(";
-    }
-    94% {
-        content: "THE BLENDER BOT(";
-    }
-    97% {
-        content: "THE BLENDER BOTS";
-    }
-    100% {
-        content: "THE BLENDER BOTS";
-    }
-}
-
-.bot p {
+.contact-card a,
+.contact-card p {
     color: #ccc;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
 }
-.botName {
+
+.contact-card a:hover {
     color: white;
-    font-size: 2em;
 }
