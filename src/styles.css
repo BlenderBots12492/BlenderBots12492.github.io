@@ -517,7 +517,11 @@ h1 {
     color: #fff;
     text-decoration: none;
     margin: 10px;
-    padding: 0px;
+    padding: 8px 20px;
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 .sponserUs div {
     text-align: center;
@@ -527,16 +531,33 @@ h1 {
 .sponserUs {
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: space-between;
     position: fixed;
     top: 0px;
     right: 0px;
     width: 100%;
-    background-color: var(--bg-black);
+    background: linear-gradient(
+        180deg,
+        rgba(10, 10, 10, 0.95) 0%,
+        rgba(10, 10, 10, 0.8) 100%
+    );
+    backdrop-filter: blur(8px);
+    z-index: 10;
+    border-bottom: 1px solid rgba(248, 240, 5, 0.2);
+    padding: 3px 0;
 }
 
 .sponserUs div a:hover {
-    color: #fff;
+    color: var(--neon-yellow);
+    background: rgba(248, 240, 5, 0.08);
+}
+.sponserUs p {
+    margin-left: 20px;
+    text-align: left;
+    justify-self: left;
+    font-family: arial;
+    font-size: 1.2em;
+    text-transform: uppercase;
 }
 .sponserUs div a::before {
     content: "";
