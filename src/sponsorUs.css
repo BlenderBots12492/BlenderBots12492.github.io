@@ -1,9 +1,8 @@
 :root {
-    --neon-pink: #f8f005;
-    --neon-cyan: #9c8400;
     --neon-yellow: #f8f005;
+    --neon-gold: #9c8400;
     --bg-black: #0a0a0a;
-    --neon-magenta: #ccc;
+    --light-gray: #ccc;
 }
 
 body {
@@ -50,8 +49,8 @@ body::before {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    border-bottom: 4px solid var(--neon-pink);
-    box-shadow: 0 0 20px var(--neon-pink);
+    border-bottom: 4px solid var(--neon-yellow);
+    box-shadow: 0 0 20px var(--neon-yellow);
 }
 
 .title {
@@ -65,10 +64,10 @@ body::before {
 .title::before {
     font-size: 2em;
     color: white;
-    text-shadow: 2px 2px 2px var(--neon-cyan);
+    text-shadow: 2px 2px 2px var(--neon-gold);
     font-family: monospace;
     font-weight: 800;
-    content: "SPONSER US";
+    content: "SPONSOR US";
 }
 
 h1,
@@ -79,8 +78,8 @@ h2 {
 
 h2 {
     margin: 40px 20px 10px;
-    color: var(--neon-magenta);
-    text-shadow: 2px 2px 0px var(--neon-cyan);
+    color: var(--light-gray);
+    text-shadow: 2px 2px 0px var(--neon-gold);
 }
 
 p {

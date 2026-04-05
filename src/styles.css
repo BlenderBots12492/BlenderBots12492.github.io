@@ -1,9 +1,8 @@
 :root {
-    --neon-pink: #f8f005;
-    --neon-cyan: #9c8400;
     --neon-yellow: #f8f005;
+    --neon-gold: #9c8400;
     --bg-black: #0a0a0a;
-    --neon-magenta: #ccc;
+    --light-gray: #ccc;
 }
 
 body {
@@ -51,8 +50,8 @@ body::before {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    border-bottom: 4px solid var(--neon-pink);
-    box-shadow: 0 0 20px var(--neon-pink);
+    border-bottom: 4px solid var(--neon-yellow);
+    box-shadow: 0 0 20px var(--neon-yellow);
 }
 
 .content {
@@ -78,8 +77,8 @@ h1 {
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 2rem;
-    color: var(--neon-magenta);
-    text-shadow: 2px 2px 0px var(--neon-cyan);
+    color: var(--light-gray);
+    text-shadow: 2px 2px 0px var(--neon-gold);
 }
 
 .about p {
@@ -116,14 +115,14 @@ h1 {
     left: 0;
     width: 100%;
     height: 2px;
-    background: var(--neon-pink);
+    background: var(--neon-yellow);
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
 
 .bot:hover {
     background: rgba(255, 255, 255, 0.05);
-    border-color: var(--neon-pink);
+    border-color: var(--neon-yellow);
     box-shadow: 0 0 30px rgba(248, 240, 5, 0.3);
     transform: translateY(-10px);
 }
@@ -191,7 +190,7 @@ h1 {
 .STEM:hover .glitch::before,
 .GraciousProfessionalism:hover .glitch::before {
     left: 4px;
-    text-shadow: -3px 0 var(--neon-cyan);
+    text-shadow: -3px 0 var(--neon-gold);
     clip-path: inset(44% 0 43% 0);
     animation: glitch-anim 2s infinite linear alternate-reverse;
 }
@@ -424,7 +423,7 @@ h1 {
 
 .contactCard {
     background: rgba(255, 255, 255, 0.03);
-    border-left: 4px solid var(--neon-pink);
+    border-left: 4px solid var(--neon-yellow);
     padding: 30px;
     text-align: left;
     transition: all 0.3s ease;
@@ -466,8 +465,8 @@ h1 {
 .info h1 {
     font-size: 2rem;
     font-weight: 500;
-    color: var(--neon-magenta);
-    text-shadow: 1px 1px 0px var(--neon-cyan);
+    color: var(--light-gray);
+    text-shadow: 1px 1px 0px var(--neon-gold);
 }
 
 .scouts {
@@ -497,7 +496,7 @@ h1 {
     max-width: 360px;
     text-align: center;
     transition: 0.2s;
-    box-shadow: -2px -2px 2px var(--neon-pink);
+    box-shadow: -2px -2px 2px var(--neon-yellow);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -508,9 +507,9 @@ h1 {
 .outreachSec div:hover {
     border-color: var(--neon-yellow);
     transform: scale(1.03);
-    box-shadow: 2px 2px 2px var(--neon-pink);
+    box-shadow: 2px 2px 2px var(--neon-yellow);
 }
-.sponserUs div a {
+.sponsorUs div a {
     font-weight: 700;
     text-align: center;
     width: 100%;
@@ -519,12 +518,12 @@ h1 {
     margin: 10px;
     padding: 0px;
 }
-.sponserUs div {
+.sponsorUs div {
     text-align: center;
     display: flex;
     align-items: center;
 }
-.sponserUs {
+.sponsorUs {
     display: flex;
     align-items: center;
     justify-content: right;
@@ -535,10 +534,10 @@ h1 {
     background-color: var(--bg-black);
 }
 
-.sponserUs div a:hover {
+.sponsorUs div a:hover {
     color: #fff;
 }
-.sponserUs div a::before {
+.sponsorUs div a::before {
     content: "";
     position: relative;
     display: block;
@@ -550,7 +549,7 @@ h1 {
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
-.sponserUs div a:hover::before {
+.sponsorUs div a:hover::before {
     transform: scaleX(1);
 }
 .title {
@@ -563,7 +562,7 @@ h1 {
 .title::before {
     font-size: 2em;
     color: white;
-    text-shadow: 2px 2px 2px var(--neon-cyan);
+    text-shadow: 2px 2px 2px var(--neon-gold);
     font: monospace; /*required for anim*/
     font-weight: 800;
     font-size: 2em;
