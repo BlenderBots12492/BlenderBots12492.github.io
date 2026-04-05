@@ -516,10 +516,10 @@ h1 {
     width: 100%;
     color: #fff;
     text-decoration: none;
-    margin: 10px;
-    padding: 8px 20px;
+    margin: 0 12px;
+    padding: 4px 12px;
     letter-spacing: 2px;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     border-radius: 4px;
     transition: all 0.3s ease;
 }
@@ -544,7 +544,8 @@ h1 {
     backdrop-filter: blur(8px);
     z-index: 10;
     border-bottom: 1px solid rgba(248, 240, 5, 0.2);
-    padding: 3px 0;
+    padding: 2px 0;
+    height: 32px;
 }
 
 .sponserUs div a:hover {
