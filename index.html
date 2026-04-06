@@ -10,9 +10,23 @@
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
             rel="stylesheet"
         />
-        <link rel="icon" type="image/png" sizes="32x32" href="src/photos/logo/favicon_io/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="src/photos/logo/favicon_io/favicon-16x16.png" />
-        <link rel="icon" type="image/x-icon" href="src/photos/logo/favicon_io/favicon.ico" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="src/photos/logo/favicon_io/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="src/photos/logo/favicon_io/favicon-16x16.png"
+        />
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="src/photos/logo/favicon_io/favicon.ico"
+        />
         <link rel="stylesheet" href="src/styles.css" />
         <link rel="stylesheet" href="src/footer.css" />
         <meta
@@ -51,7 +65,11 @@
                     alt="The Blender Bots"
                     style="height: 25px; width: auto; margin-left: 15px"
                 />
-                <div class="sponsor-bar-inner"><a class="sponsor-bar-link" href="/src/sponserUs.html">SPONSER US</a></div>
+                <div class="sponsor-bar-inner">
+                    <a class="sponsor-bar-link" href="/src/sponserUs.html"
+                        >SPONSER US</a
+                    >
+                </div>
             </div>
         </nav>
         <div class="content">
@@ -65,10 +83,7 @@
                 </p>
             </section>
             <section class="info">
-                <h2>
-                    <span>DECODE</span> World ranking
-                    <span>90</span>%
-                </h2>
+                <h2><span>DECODE</span> World ranking <span>90</span>%</h2>
 
                 <a class="scouts-link" href="https://ftcscout.org/teams/12492"
                     >View on scouts</a
@@ -77,12 +92,13 @@
             </section>
 
             <section class="robots">
-                <h2>Robots</h2>
-                <p>
-                    We have been making bots since 2016. Here are some of our
-                    recent creations:
-                </p>
-
+                <div class="robots-title">
+                    <h2>Robots</h2>
+                    <p>
+                        We have been making bots since 2016. Here are some of
+                        our recent creations:
+                    </p>
+                </div>
                 <div class="bot-grid">
                     <a class="bot-card" href="src/bot.html?bot=AIM">
                         <h2 class="bot-name" data-text="AIM">AIM</h2>
@@ -332,5 +348,45 @@
                 /></a>
             </div>
         </footer>
+        <script>
+            class FadeIn {
+                items = [];
+                constructor() {
+                    window.addEventListener("scroll", () => {
+                        this.items.forEach((item) => {
+                            if (
+                                item.element.getBoundingClientRect().top <
+                                window.innerHeight - 100
+                            ) {
+                                item.element.classList.add("fade-visible");
+                                item.visible = true;
+                            }
+                        });
+                    });
+                }
+                add(element) {
+                    if (!element) return;
+                    element.classList.add("fade-ready");
+                    this.items.push({
+                        element,
+                        visible: false,
+                    });
+                }
+                addMultiple(elements) {
+                    for (const element of elements) {
+                        this.add(element);
+                    }
+                }
+            }
+            const fadeIn = new FadeIn();
+            fadeIn.addMultiple(document.querySelectorAll(".bot-card"));
+            fadeIn.addMultiple(document.querySelectorAll(".outreach-item"));
+            fadeIn.addMultiple(document.querySelectorAll(".contact-card"));
+            fadeIn.addMultiple(document.querySelectorAll(".sponsor-link"));
+            fadeIn.add(document.querySelector(".about"));
+            fadeIn.add(document.querySelector(".contact > h2"));
+            fadeIn.add(document.querySelector(".info"));
+            fadeIn.add(document.querySelector(".robots-title"));
+        </script>
     </body>
 </html>
