@@ -203,7 +203,7 @@ body::before {
     z-index: 10;
     border-bottom: 1px solid rgba(248, 240, 5, 0.2);
     padding: 2px 0;
-    height: 32px;
+    height: 40px;
 }
 
 .sponsor-bar-inner {
@@ -229,6 +229,37 @@ body::before {
 .sponsor-bar-link:hover {
     color: var(--neon-yellow);
     background: rgba(248, 240, 5, 0.08);
+}
+
+/* CTA button: black background with gold border */
+.cta-btn {
+    background: #000;
+    color: #ffd700;
+    border: 2px solid #ffd700;
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-weight: 800;
+    font-family: inherit;
+    cursor: pointer;
+    margin: 0 12px;
+    text-transform: none;
+    letter-spacing: 0.4px;
+    box-shadow: none;
+    transition:
+        transform 0.15s ease,
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+.cta-btn:hover {
+    background: #111;
+    color: #ffd700;
+    border-color: #ffd700;
+    transform: scale(1.05) rotateZ(2deg);
+}
+.cta-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.65);
 }
 
 .sponsor-bar-link::before {
