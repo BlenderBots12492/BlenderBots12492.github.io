@@ -166,6 +166,7 @@ a {
 }
 
 /* Ensure the logo in the sponsor bar lines up with index.html baseline */
+.sponsor-bar > a > img.nav-logo,
 .sponsor-bar > img.nav-logo {
     height: 25px;
     width: auto;
