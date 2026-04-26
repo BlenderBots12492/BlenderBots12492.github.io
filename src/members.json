@@ -28,7 +28,23 @@
     "years": ["23-24", "24-25", "25-26"],
     "roles": ["lead mechanic", "president"],
     "subteam": "mechanics",
-    "bio": "Has done absolutely nothing for the team",
+    "bio": "Not nearly as handsome as Joseph",
+    "team": "Blender Bots"
+  },
+  {
+    "name": "Alexa",
+    "years": ["22-23", "23-24", "24-25", "25-26"],
+    "roles": ["lead marketer"],
+    "subteam": "Marketing",
+    "bio": "Next year we are done for without her",
+    "team": "Blender Bots"
+  },
+  {
+    "name": "Juan",
+    "years": ["25-26"],
+    "roles": ["secretary"],
+    "subteam": "Marketing",
+    "bio": "Accidently picked the role with the most paperwork",
     "team": "Blender Bots"
   }
 ]

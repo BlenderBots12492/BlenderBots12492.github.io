@@ -141,11 +141,145 @@
             const memberName = params.get("member");
             console.log("memberName=", memberName);
 
-            const members = fetch("/src/members.json").then((res) => {
-                if (!res.ok)
-                    throw new Error("Failed to load members: " + res.status);
-                return res.json();
-            });
+            // Build team UI using provided members.json data
+            const contentEl = document.querySelector(".content");
+            contentEl.innerHTML = `
+                <div id="team-area" class="team-area"></div>
+            `;
+
+            function initials(name) {
+                if (!name) return "";
+                const parts = name.trim().split(/\s+/);
+                return parts
+                    .map((p) => p[0])
+                    .slice(0, 2)
+                    .join("")
+                    .toUpperCase();
+            }
+            function gradientForSubteam(subteam) {
+                switch ((subteam || "").toLowerCase()) {
+                    case "programming":
+                        return "linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)";
+                    case "mechanics":
+                        return "linear-gradient(135deg, #f59e0b 0%, #f472b6 100%)";
+                    case "controls":
+                        return "linear-gradient(135deg, #10b981 0%, #34d399 100%)";
+                    case "marketing":
+                        return "linear-gradient(135deg, #a855f7 0%, #ec4899 100%)";
+                    default:
+                        return "linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%)";
+                }
+            }
+
+            // Capitalize each word in a string
+            function capitalizeWords(str) {
+                if (!str) return "";
+                return str
+                    .split(/\s+/)
+                    .map(
+                        (w) =>
+                            w.charAt(0).toUpperCase() +
+                            w.slice(1).toLowerCase(),
+                    )
+                    .join(" ");
+            }
+
+            // Format roles array into a capitalized, comma-separated string
+            function formatRoles(roles) {
+                if (!roles || roles.length === 0) return "";
+                return roles.map((r) => capitalizeWords(r)).join(", ");
+            }
+
+            function renderCard(members) {
+                const area = document.getElementById("team-area");
+                const grid = document.createElement("div");
+                grid.className = "team-grid";
+                // Sort by rank, then original order
+                const sorted = members
+                    .map((mm, idx) => ({ mm, idx }))
+                    .sort((a, b) => {
+                        const ra = rankForMember(a.mm);
+                        const rb = rankForMember(b.mm);
+                        if (ra !== rb) return ra - rb;
+                        return a.idx - b.idx;
+                    })
+                    .map((x) => x.mm);
+                grid.innerHTML = sorted
+                    .map((m) => {
+                        const img = initials(m.name);
+                        const grad = gradientForSubteam(m.subteam);
+                        const subteamCap = m.subteam
+                            ? capitalizeWords(m.subteam)
+                            : "";
+                        const years =
+                            m.years && m.years.length ? m.years.join(", ") : "";
+                        const rolesStr =
+                            m.roles && m.roles.length
+                                ? formatRoles(m.roles)
+                                : "";
+                        const metaParts = [];
+                        if (rolesStr) metaParts.push("Roles: " + rolesStr);
+                        if (years) metaParts.push("Years: " + years);
+                        const metaText = metaParts.length
+                            ? `<div class=\"meta\">${metaParts.join(" | ")}</div>`
+                            : "";
+                        return `
+                        <div class=\"team-card\">
+                            <div class=\"avatar\" aria-label=\"${m.name}\" style=\"background:${grad};\">${img}</div>
+                            <div class=\"team-body\">
+                                <div class=\"name\">${m.name}</div>
+                                <div class=\"subteam\">${subteamCap}</div>
+                                ${metaText}
+                            </div>
+                        </div>
+                    `;
+                    })
+                    .join("");
+                area.innerHTML = "";
+                area.appendChild(grid);
+            }
+
+            // Rank helper for sorting
+            function rankForMember(m) {
+                const priority = [
+                    "president",
+                    "vice president",
+                    "lead programmer",
+                    "lead mechanic",
+                    "lead marketer",
+                    "treasurer",
+                    "secretary",
+                ];
+                if (m.name == "Niranjan") {
+                    return 4.5;
+                }
+                if (!m.roles || m.roles.length === 0) return priority.length;
+                let best = priority.length;
+                for (const r of m.roles) {
+                    const idx = priority.indexOf(r.toLowerCase());
+                    if (idx !== -1 && idx < best) best = idx;
+                }
+                return best;
+            }
+
+            // Load members from JSON and render initial view
+            fetch("/src/members.json")
+                .then((res) => {
+                    if (!res.ok)
+                        throw new Error(
+                            "Failed to load members: " + res.status,
+                        );
+                    return res.json();
+                })
+                .then((data) => {
+                    const members = data;
+                    // Render initial card view
+                    renderCard(members);
+                })
+                .catch((err) => {
+                    console.error(err);
+                    contentEl.innerHTML = "<p>Error loading team data.</p>";
+                });
         </script>
     </body>
 </html>
