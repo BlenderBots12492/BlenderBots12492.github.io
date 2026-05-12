@@ -67,6 +67,23 @@
                 document.getElementById("galleryGrid").innerHTML = "";
             }
 
+            function updateRoadmapLineHeight() {
+                const roadmapGrid = document.getElementById("timelineList");
+                if (!roadmapGrid) return;
+                const lastStep = roadmapGrid.querySelector(".roadmap-card:last-child .roadmap-step");
+                if (!lastStep) {
+                    roadmapGrid.style.removeProperty("--roadmap-line-height");
+                    return;
+                }
+                const gridRect = roadmapGrid.getBoundingClientRect();
+                const stepRect = lastStep.getBoundingClientRect();
+                const lineHeight = stepRect.top - gridRect.top + 12;
+                roadmapGrid.style.setProperty(
+                    "--roadmap-line-height",
+                    `${Math.max(0, lineHeight)}px`,
+                );
+            }
+
             function loadHeader(robot) {
                 const headerContainer = document.getElementById("shared-header");
                 if (!headerContainer) return;
@@ -113,6 +130,7 @@
                             },
                         };
                         fadeIn.init();
+                        window.addEventListener("resize", updateRoadmapLineHeight);
                         const params = new URLSearchParams(window.location.search);
                         const botKey = params.get("bot");
                         if (!botKey) {
@@ -175,6 +193,7 @@
                                     timelineList.appendChild(card);
                                     fadeIn.add(card);
                                 });
+                                updateRoadmapLineHeight();
                                 const galleryGrid = document.getElementById("galleryGrid");
                                 galleryGrid.innerHTML = "";
                                 (robot.gallery || []).forEach((image) => {
