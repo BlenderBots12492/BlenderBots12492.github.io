@@ -39,6 +39,7 @@ html {
 }
 .sponsor-bar > a > img.nav-logo,
 .sponsor-bar > img.nav-logo {
+    margin-top: calc(var(--nav-height) - (var(--nav-logo-height) / 1.25));
     height: var(--nav-logo-height) !important;
     width: auto;
 }
