@@ -451,7 +451,7 @@ h1 {
     margin-top: 40px;
 }
 
-.sponsor-link {
+.sponsor-link-C1 {
     background: rgba(0, 0, 0, 1);
     border: 1px solid rgba(0, 0, 0, 1);
     color: white;
@@ -470,7 +470,58 @@ h1 {
     min-height: 100px;
 }
 
-.sponsor-link:hover {
+.sponsor-link-C1:hover {
+    border-color: yellow;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+    transform: scale(1.05);
+    color: yellow;
+}
+
+.sponsor-link-C2 {
+    background: rgba(4, 2, 4, 1);
+    border: 1px solid rgba(1, 1, 1, 1);
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition:
+        all 0.3s ease,
+        opacity 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+}
+
+.sponsor-link-C3 {
+    background: rgba(0, 4, 0, 1);
+    border: 1px solid rgba(0, 4, 0, 1);
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition:
+        all 0.3s ease,
+        opacity 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+}
+
+.sponsor-link-C2:hover {
+    border-color: yellow;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+    transform: scale(1.05);
+    color: yellow;
+}
+.sponsor-link-C3:hover {
     border-color: yellow;
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
     transform: scale(1.05);
