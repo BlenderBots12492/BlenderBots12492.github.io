@@ -220,9 +220,10 @@ a {
 }
 .donate-btn-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     margin-top: 10px;
+    margin-left: 20px;
     width: 100%;
 }
 .donate-button {
@@ -230,7 +231,7 @@ a {
     background: #171717;
     color: #ffd700;
     border-width: 0px;
-    border-radius: 20px;
+    border-radius: 8px;
     padding: 8px 18px;
     font-weight: 800;
     font-family: inherit;
