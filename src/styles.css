@@ -622,15 +622,20 @@ h1 {
 /* ========================================
    CALENDAR SECTION
    ======================================== */
+.meetings,
 .calendar {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
     padding: 80px 10px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.calendar h2 {
+.calendar h2,
+.meetings h2 {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 2em;
@@ -641,10 +646,25 @@ h1 {
     color: var(--light-gray);
     margin-bottom: 35px;
     font-size: 1.05rem;
+    max-width: 800px;
+}
+
+.calendar-intro a {
+    color: var(--light-gray);
+    text-decoration: none;
+    font-size: inherit;
+    border-bottom: 1px solid rgba(248, 240, 5, 0.4);
+    transition: color 0.2s ease, opacity 0.3s;
+}
+
+.calendar-intro a:hover {
+    color: white;
 }
 
 .calendar-grid {
     display: grid;
+    width: 100%;
+    max-width: 940px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
 }
