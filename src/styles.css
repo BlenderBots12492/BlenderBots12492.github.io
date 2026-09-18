@@ -497,8 +497,8 @@ h1 {
 }
 
 .sponsor-link-C3 {
-    background: rgba(0, 4, 0, 1);
-    border: 1px solid rgba(0, 4, 0, 1);
+    background: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
     color: white;
     text-decoration: none;
     cursor: pointer;
@@ -617,6 +617,95 @@ h1 {
     .sponsor-bar a {
         margin: 0 6px;
     }
+}
+
+/* ========================================
+   CALENDAR SECTION
+   ======================================== */
+.meetings,
+.calendar {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calendar h2,
+.meetings h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.calendar-intro {
+    color: var(--light-gray);
+    margin-bottom: 35px;
+    font-size: 1.05rem;
+    max-width: 800px;
+}
+
+.calendar-intro a {
+    color: var(--light-gray);
+    text-decoration: none;
+    font-size: inherit;
+    border-bottom: 1px solid rgba(248, 240, 5, 0.4);
+    transition: color 0.2s ease, opacity 0.3s;
+}
+
+.calendar-intro a:hover {
+    color: white;
+}
+
+.calendar-grid {
+    display: grid;
+    width: 100%;
+    max-width: 940px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.calendar-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: left;
+    transition: all 0.3s ease, opacity 0.5s;
+    box-shadow: 0 0 0 rgba(248, 240, 5, 0);
+}
+
+.calendar-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--neon-yellow);
+    box-shadow: 0 0 20px rgba(248, 240, 5, 0.15);
+    transform: translateY(-6px);
+}
+
+.calendar-date {
+    display: inline-block;
+    color: var(--neon-yellow);
+    font-weight: 700;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.calendar-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.calendar-card p {
+    margin: 0;
+    color: var(--light-gray);
+    font-size: 1rem;
 }
 
 /* ========================================
