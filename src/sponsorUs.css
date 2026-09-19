@@ -183,36 +183,11 @@ a {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 14px;
-    padding: 28px 24px 22px;
-    background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.04) 0%,
-        rgba(255, 255, 255, 0.015) 100%
-    );
-    border: 1px solid rgba(248, 240, 5, 0.14);
-    border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
-    backdrop-filter: blur(6px);
+    padding: 8px 0 4px;
 }
 
-.donate-subtext {
-    margin: 0;
-    max-width: none;
-    font-size: 0.85rem;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-    color: #9a9a9a;
-    line-height: 1.5;
-}
-
-/* --- Sponsor copy card --- */
 .sponsor-copy {
-    background: rgba(255, 255, 255, 0.035);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    padding: 36px 32px 32px;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+    padding: 0;
 }
 
 .sponsor-copy h2 {
@@ -254,11 +229,8 @@ a {
 }
 
 @media (max-width: 640px) {
-    .sponsor-copy {
-        padding: 26px 20px 24px;
-    }
-    .donate-hero {
-        padding: 22px 16px 18px;
+    .sponsor-copy h2 {
+        font-size: 2rem;
     }
 }
 
