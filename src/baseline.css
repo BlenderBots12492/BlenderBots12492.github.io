@@ -56,7 +56,7 @@ html {
         url("/src/photos/team-photo.webp");
     min-height: 80vh;
     background-attachment: fixed;
-    background-position: center bottom;
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -64,12 +64,30 @@ html {
     box-shadow: 0 0 20px var(--neon-yellow);
 }
 @media (min-width: 1024px) {
-    /* no override for baseline on large screens */
+    /* keep centered top on large screens to keep heads visible */
+    .parallax {
+        background-position: center top;
+    }
+}
+/* Chromebook 1366x768 and similar 16:9 school devices: reduce height so sides are not cropped */
+@media (max-width: 1366px) and (max-height: 800px) {
+    .parallax {
+        min-height: 62vh;
+        background-position: center top;
+        background-size: cover;
+    }
+}
+@media (max-width: 1024px) and (max-height: 800px) {
+    .parallax {
+        min-height: 55vh;
+    }
 }
 /* Mobile: disable fixed background to prevent iOS zoom bug */
 @media (max-width: 768px) {
     .parallax {
         background-attachment: scroll;
+        min-height: 60vh;
+        background-position: center top;
     }
 }
 html {
